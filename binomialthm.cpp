@@ -17,13 +17,13 @@ int main()
     }
     else {
         for (int i = num; i > 0; i--) {
-           // std::cout << i;
+           std::cout << i;
             if (i-1 > 0) {
-              //  std::cout << " * ";
+               std::cout << " * ";
             }
             prod *= i;  // Multiply prod by the current value of i
         }
-       // std::cout << " = " << prod << endl;  // Output the final product (factorial)
+      std::cout << " = " << prod << endl;  // Output the final product (factorial)
     }
   
 
