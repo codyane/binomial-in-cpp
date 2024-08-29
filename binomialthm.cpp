@@ -5,8 +5,28 @@ using namespace std;
 
 int main() 
 {
-    int num;
-    int prod = 1;  // Initialize product to 1
+
+    int position;
+    int number;
+    std::cout << "Enter The Position of C: \n";
+    std::cin >> position;
+
+// didnt use switch here because only two conditions.
+
+    if (position == 0){
+        std::cout << "The Value of C is 1";
+    }
+
+    if (position == 1){
+        std::cout << "The Value of C is N\n";
+    }
+   
+
+// * the following code is for factoral and its output.
+
+/*
+
+        int prod = 1;  // Initialize product to 1
 
     std::cout << "Enter a number to calculate the value of C: ";
     std::cin >> num;
@@ -25,7 +45,7 @@ int main()
         }
       std::cout << " = " << prod << endl;  // Output the final product (factorial)
     }
-  
+*/
 
     return 0;
 }
