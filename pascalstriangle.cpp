@@ -40,7 +40,11 @@ int binomialCoeff(int n, int k)
 
 int main()
 {
-    int n = 7;
+
+    int n;
+
+    std::cout << "Enter The value of N: ";
+    std::cin >> n ;
     printPascal(n);
     return 0;
 }
