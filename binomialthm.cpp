@@ -3,49 +3,57 @@
 
 using namespace std;
 
-int main() 
-{
+//function to create factorial 
+int factorial(int num){
+    int result = 1;
+    for (int i = 1; i < num; i ++){
+        result *= i;
+    }
+    return result;
+}
 
-    int position;
-    int number;
-    std::cout << "Enter The Position of C: \n";
-    std::cin >> position;
+//function to calculate Combination
+int binomialfunction(int n, int k) {
+    return factorial(n) / (factorial(k) * factorial(n - k)); 
+}
 
-// didnt use switch here because only two conditions.
+void binomialexpansion(int a, int b, int n){
 
-    if (position == 0){
-        std::cout << "The Value of C is 1";
+    double result;
+
+    //loop for term in expansion
+    for(int k = 1; k <= n; k++){
+        //binomial coffeicicent nCk
+        int coeff = binomialfunction(n, k);
+
+        //a^(n-k) * b^k
+        double term = coeff * pow(a, n - k) * pow(b, k);
+
+        //Output ther current term
+       
+        std::cout << "Term " << k + 1 << ": " << coeff << " * " << a << "^" << (n - k) << " * " << b << "^" << k << " = " << term << '\n';
+    
+        // Add the term to the result
+        result += term;
     }
 
-    if (position == 1){
-        std::cout << "The Value of C is N\n";
-    }
-   
+    //output the final result
+    std::cout << "(a + b)^" << n << " = " << result << '\n';
+}
 
-// * the following code is for factoral and its output.
+int main () {
+    int a, b, n;
 
-/*
+    // Input values for a, b, and n
+    cout << "Enter value of a: ";
+    cin >> a;
+    cout << "Enter value of b: ";
+    cin >> b;
+    cout << "Enter value of n: ";
+    cin >> n;
 
-        int prod = 1;  // Initialize product to 1
-
-    std::cout << "Enter a number to calculate the value of C: ";
-    std::cin >> num;
-    std::cout << endl;
-
-    if (num < 1 || num > 10) {
-        cout << "Please enter a number from 1 to 10 only!";
-    }
-    else {
-        for (int i = num; i > 0; i--) {
-           std::cout << i;
-            if (i-1 > 0) {
-               std::cout << " * ";
-            }
-            prod *= i;  // Multiply prod by the current value of i
-        }
-      std::cout << " = " << prod << endl;  // Output the final product (factorial)
-    }
-*/
+      // Call function to calculate the binomial expansion
+    binomialexpansion(a, b, n);
 
     return 0;
 }

@@ -1,5 +1,0 @@
-so observe that as the formulae goes on N at C does not change but the  value of 
- C does change because of the formulaes given below in the image
-but we can also observe that the value of n at x decreases by one so basically
-we can say power of n at x = n-- . 
-also observe that the power of a increases by one so power of a is ++
